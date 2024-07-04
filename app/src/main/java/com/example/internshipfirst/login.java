@@ -55,7 +55,7 @@ public class login extends AppCompatActivity {
                 else{
                     Toast.makeText(login.this, "email " + em + "\n" + "password " + pa, Toast.LENGTH_SHORT).show();
                 }
-                Snackbar.make(view,"ready",Snackbar.LENGTH_LONG).show();
+                //Snackbar.make(view,"ready",Snackbar.LENGTH_LONG).show();
             }
         });
     }
