@@ -3,10 +3,12 @@ package com.example.internshipfirst;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,8 +19,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class login extends AppCompatActivity {
+import org.w3c.dom.Text;
 
+public class login extends AppCompatActivity {
+    TextView login_create,forget;
     EditText email,password;
     Button signin;
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
@@ -31,6 +35,8 @@ public class login extends AppCompatActivity {
         signin = (Button) findViewById(R.id.login_signup);
         email = (EditText) findViewById(R.id.login_email);
         password = (EditText) findViewById(R.id.login_password);
+        login_create = (TextView) findViewById(R.id.login_create);
+        forget = (TextView) findViewById(R.id.forget);
 
         signin.setOnClickListener(new View.OnClickListener() {
 
@@ -54,8 +60,26 @@ public class login extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(login.this, "email " + em + "\n" + "password " + pa, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(login.this, Profile.class);
+                    startActivity(intent);
                 }
                 //Snackbar.make(view,"ready",Snackbar.LENGTH_LONG).show();
+            }
+        });
+
+        login_create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(login.this, register.class);
+                startActivity(intent);
+            }
+        });
+
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(login.this, forgetPassword.class);
+                startActivity(intent);
             }
         });
     }

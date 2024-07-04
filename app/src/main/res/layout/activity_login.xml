@@ -34,61 +34,62 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
         android:layout_weight="1"
-        android:padding="20dp"
-        >
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/email"
-            android:layout_marginTop="70dp"
-            android:inputType="textEmailAddress"
-            android:drawableLeft="@drawable/baseline_email_24"
-            android:drawablePadding="20dp"
-            android:background="@drawable/back"
-            android:padding="10dp"
-            android:id="@+id/login_email"
-            />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <EditText
+            android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/back"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="20dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:inputType="textPassword"
+            android:background="@drawable/back"
             android:drawableLeft="@drawable/baseline_password_24"
             android:drawablePadding="20dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
             android:padding="10dp"
-            android:background="@drawable/back"
-            android:id="@+id/login_password"
-            />
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
         <TextView
             style="@style/text_14"
-            android:text="@string/forget"
-            android:textColor="#1F41BB"
             android:layout_gravity="end"
             android:layout_marginBottom="30dp"
-            />
+            android:text="@string/forget"
+            android:id="@+id/forget"
+            android:textColor="#1F41BB" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sign_in"
-            android:textColor="@color/white"
-            android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:background="@drawable/design"
-            android:id="@+id/login_signup"
-            />
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/login_create"
             style="@style/text_15"
-            android:text="@string/create"
             android:layout_marginTop="15dp"
-            />
+            android:text="@string/create" />
     </LinearLayout>
 
 
