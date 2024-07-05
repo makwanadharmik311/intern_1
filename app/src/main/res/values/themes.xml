@@ -13,20 +13,20 @@
     <style name="text_20" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="text_14" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
     </style>
 
     <style name="edittext" parent="Widget.AppCompat.EditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:padding">@dimen/_10sdp</item>
     </style>
 
     <style name="text_15" parent="Widget.AppCompat.TextView">

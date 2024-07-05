@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -11,11 +11,14 @@
     >
 
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
-        android:layout_width="400dp"
-        android:layout_height="448dp"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_348sdp"
         android:layout_gravity="center"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
@@ -34,13 +37,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Discover Your\nDream Job here"
-            android:textSize="30sp"
+            android:textSize="@dimen/_30sdp"
             android:textColor="#1F41BB"
             android:textStyle="bold"
             android:gravity="center"
             />
         <TextView
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Explore of the existing job role based on your\ninterest and study major"
@@ -51,26 +54,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_70sdp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            >
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/design"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
                 android:text="Login"
-                android:textSize="20sp"
+                android:textSize="@dimen/_20sdp"
                 app:backgroundTint="@null"
                 android:id="@+id/btn_one"
                 />
@@ -80,23 +83,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center">
+            android:gravity="center"
+            >
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/back"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:text="Register"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:text="register"
+                android:textSize="@dimen/_20sdp"
                 app:backgroundTint="@null"
                 android:id="@+id/btn_two"
+                android:textColor="@color/black"
                 />
+
         </LinearLayout>
     </LinearLayout>
+    </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>
 
