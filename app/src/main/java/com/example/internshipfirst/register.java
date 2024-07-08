@@ -2,6 +2,7 @@ package com.example.internshipfirst;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class register extends AppCompatActivity {
     EditText reg_name,reg_con,reg_email,reg_pass,reg_conf;
     Button regis;
     TextView already;
+    SQLiteDatabase db;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,6 +28,10 @@ public class register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
+
+        db = openOrCreateDatabase("internshipfirst.db",MODE_PRIVATE,null);
+        String query = "CREATE TABLE IF NOT EXISTS USERS(USERID INT PRIMARY KEY,NAME VARCHAR(50),CONTACT BIGINT(10),EMAIL VARCHAR(50),PASSWORD VARCHARR(20))";
+        db.execSQL(query);
 
         reg_name = (EditText) findViewById(R.id.reg_name);
         reg_con = (EditText) findViewById(R.id.reg_con);
@@ -73,6 +79,8 @@ public class register extends AppCompatActivity {
                     reg_conf.setError("error !");
                 }
                 else{
+                    String query = "INSERT INTO USERS VALUES (NULL,'"+ name +"','"+ contect +"','"+ email +"','"+ password +"')";
+                    db.execSQL(query);
                     Intent intent = new Intent(register.this, Profile.class);
                     startActivity(intent);
                 }
